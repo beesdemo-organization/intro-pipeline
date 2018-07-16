@@ -31,7 +31,9 @@ pipeline {
         }
       }
           stage('Checkpoint') {
-         agent none
+           agent {
+    label 'jdk9'
+}
          steps {
             checkpoint 'Checkpoint'
          }
